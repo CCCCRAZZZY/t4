@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ugga Scroll</title>
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-XxU3j2Q+afFvHjcPCE6QGp6TX6UoR7T+9Ez9ESVzrZBGzIYcocA2Qx2Z1l+1yZ+c7NmWWoZP9ukS6z0wSX1Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<style>
+
+
+
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #111;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  z-index: 999;
+  border: 1px solid blue;
+
+}
+
+/* Sidebar buttons */
+.sidebar button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #666;
+  cursor: pointer;
+  transition: 1.1s ease;
+  background-color: blue;
+}
+
+.sidebar button:hover {
+  background: green;
+  transform: scale(2.16);
+}
+
+/* Spacer just fills the scrollable area */
+.spacer {
+  width: 100%;
+}
+
+
+
+
+
+</style>
+<body>
+  <aside class="sidebar">
+  
+  <button onclick="scrollToY(0)"> <p>🏠</p><i class="fas fa-home"></i></button>
+  <button onclick="scrollToY(1000)"><p>🖌<p><i class="fas fa-user"></i></button>
+  <button onclick="scrollToY(2000)"><p>📃</p><i class="fas fa-bolt"></i></button>
+  <button onclick="scrollToY(3000)"><p>📞</p><i class="fas fa-skull"></i></button>
+</aside>
+
+
+
+  <main>
+    <!-- Empty vertical space -->
+    <div class="spacer" style="height: 4000px;"></div>
+  </main>
+
+  <script>
+    function scrollToY(y) {
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
