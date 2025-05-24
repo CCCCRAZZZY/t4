@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ugga Scroll</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-XxU3j2Q+afFvHjcPCE6QGp6TX6UoR7T+9Ez9ESVzrZBGzIYcocA2Qx2Z1l+1yZ+c7NmWWoZP9ukS6z0wSX1Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Cyber Spray</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
@@ -12,20 +12,25 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
+
     body {
-      background: #111;
+      background: #0d0d0d;
       color: white;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     .header {
       text-align: center;
-      padding: 38px;
-      color: blue;
+      padding: 40px;
     }
+
     .header h1 {
-      font-size: clamp(24px, 5vw, 60px);
-      color: green;
+      font-size: clamp(32px, 6vw, 72px);
+      color: #00ff99;
+      text-shadow: 0 0 10px #00ff99;
+      font-weight: bold;
     }
+
     .video-container {
       position: relative;
       width: 100%;
@@ -33,6 +38,7 @@
       height: 0;
       overflow: hidden;
     }
+
     .video-container iframe {
       position: absolute;
       top: 0;
@@ -40,6 +46,7 @@
       width: 100%;
       height: 100%;
     }
+
     .sidebar {
       position: fixed;
       top: 50%;
@@ -47,30 +54,34 @@
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
-      gap: 90px;
+      gap: 25px;
+      background: rgba(0, 255, 150, 0.1);
+      padding: 15px 10px;
+      border-radius: 20px;
+      border: 1px solid #00ff99;
+      box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
       z-index: 999;
-      border: 1px solid blue;
     }
-    .sidebar button {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: none;
-      background: green;
-      cursor: pointer;
-      transition: 0.3s ease;
-      color: white;
-      font-size: 20px;
+
+    .sidebar a {
+      color: #00ff99;
+      text-decoration: none;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      border-radius: 12px;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
-    .sidebar button:hover {
-      background: black;
-      transform: scale(1.5);
-    }
+
+    
+
     .spacer {
       height: 4000px;
     }
 
-    /* Responsive sidebar for small screens */
+    /* Mobile layout */
     @media (max-width: 768px) {
       .sidebar {
         flex-direction: row;
@@ -78,48 +89,38 @@
         top: auto;
         left: 50%;
         transform: translateX(-50%);
-        background: #000;
         padding: 10px;
-        border-radius: 30px;
-        gap: 20px;
+        border-radius: 50px;
       }
-      .sidebar button {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-      }
-    }
 
-    /* Toggle layout mode if needed */
-    body.mobile .sidebar {
-      flex-direction: row;
-      bottom: 10px;
-      top: auto;
-      left: 50%;
-      transform: translateX(-50%);
+      .sidebar a {
+        font-size: 18px;
+        padding: 100px;
+      }
     }
   </style>
 </head>
 <body>
+
   <div class="header">
     <h1>CYBER SPRAY</h1>
   </div>
 
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/oMCijY1XGlQ?autoplay=1&mute=1&loop=1&playlist=oMCijY1XGlQ"
-      title="YouTube video player"
+      title="Cyber Spray Video"
       frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
 
-  <aside class="sidebar">
-    <button onclick="scrollToY(0)">🏠</button>
-    <button onclick="scrollToY(1000)">🎨</button>
-    <button onclick="scrollToY(2000)">📃</button>
-    <button onclick="scrollToY(3000)">📞</button>
-  </aside>
+  <nav class="sidebar">
+    <a  onclick="scrollToY(0)" title="Home"><i class="fas fa-home"></i></a>
+    <a  onclick="scrollToY(1000)" title="Art"><i class="fas fa-spray-can"></i></a>
+    <a  onclick="scrollToY(2000)" title="Docs"><i class="fas fa-file-alt"></i></a>
+    <a  onclick="scrollToY(3000)" title="Contact"><i class="fas fa-phone"></i></a>
+  </nav>
 
   <main>
     <div class="spacer"></div>
@@ -129,10 +130,8 @@
     function scrollToY(y) {
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
-    function toggleLayout() {
-      document.body.classList.toggle('mobile');
-    }
   </script>
+
 </body>
 </html>
 
