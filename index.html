@@ -51,21 +51,54 @@
       z-index: 999;
       border: 1px solid blue;
     }
-    .sidebar button {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: none;
-      background: green;
-      cursor: pointer;
-      transition: 0.3s ease;
-      color: white;
-      font-size: 20px;
-    }
-    .sidebar button:hover {
-      background: black;
-      transform: scale(1.5);
-    }
+   .sidebar button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #00ccff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar button .stars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  animation: none;
+  pointer-events: none;
+}
+
+.sidebar button:hover .stars {
+  animation: starburst 0.6s ease-out forwards;
+  filter: drop-shadow(0 0 10px #99ebff);
+}
+
+@keyframes starburst {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 10;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(8);
+    opacity: 0;
+  }
+}
+
     .spacer {
       height: 4000px;
     }
@@ -96,7 +129,7 @@
       bottom: 10px;
       top: auto;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-10%);
     }
   </style>
 </head>
@@ -115,11 +148,12 @@
   </div>
 
   <aside class="sidebar">
-    <button onclick="scrollToY(0)">🏠</button>
-    <button onclick="scrollToY(1000)">🎨</button>
-    <button onclick="scrollToY(2000)">📃</button>
-    <button onclick="scrollToY(3000)">📞</button>
-  </aside>
+  <button onclick="scrollToY(0)">🏠<span class="stars"></span></button>
+  <button onclick="scrollToY(1000)">🎨<span class="stars"></span></button>
+  <button onclick="scrollToY(2000)">📃<span class="stars"></span></button>
+  <button onclick="scrollToY(3000)">📞<span class="stars"></span></button>
+</aside>
+
 
   <main>
     <div class="spacer"></div>
