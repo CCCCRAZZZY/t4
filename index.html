@@ -75,7 +75,11 @@
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    
+    .sidebar a:hover {
+      background: #00ff99;
+      color: black;
+      transform: scale(1.15);
+    }
 
     .spacer {
       height: 4000px;
@@ -95,7 +99,7 @@
 
       .sidebar a {
         font-size: 18px;
-        padding: 100px;
+        padding: 10px;
       }
     }
   </style>
@@ -116,10 +120,10 @@
   </div>
 
   <nav class="sidebar">
-    <a  onclick="scrollToY(0)" title="Home"><i class="fas fa-home"></i></a>
-    <a  onclick="scrollToY(1000)" title="Art"><i class="fas fa-spray-can"></i></a>
-    <a  onclick="scrollToY(2000)" title="Docs"><i class="fas fa-file-alt"></i></a>
-    <a  onclick="scrollToY(3000)" title="Contact"><i class="fas fa-phone"></i></a>
+    <a href="#" onclick="scrollToY(0)" title="Home"><i class="fas fa-home"></i></a>
+    <a href="#" onclick="scrollToY(1000)" title="Art"><i class="fas fa-spray-can"></i></a>
+    <a href="#" onclick="scrollToY(2000)" title="Docs"><i class="fas fa-file-alt"></i></a>
+    <a href="#" onclick="scrollToY(3000)" title="Contact"><i class="fas fa-phone"></i></a>
   </nav>
 
   <main>
@@ -134,4 +138,5 @@
 
 </body>
 </html>
+
 
