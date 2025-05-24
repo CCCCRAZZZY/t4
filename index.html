@@ -14,6 +14,21 @@
 
 
 
+
+
+.header {
+        text-align: center;
+		top: 1000px;
+        padding: 38px;
+		color: blue;
+		font-size: 40px;
+      
+		
+    }
+
+
+
+
 /* Basic reset */
 * {
   margin: 0;
@@ -49,11 +64,11 @@ body {
   background: #666;
   cursor: pointer;
   transition: 1.1s ease;
-  background-color: blue;
+  background-color: green;
 }
 
 .sidebar button:hover {
-  background: green;
+  background: black;
   transform: scale(2.16);
 }
 
@@ -62,16 +77,39 @@ body {
   width: 100%;
 }
 
+.home{
+background: black;
+}
 
+
+/h1{
+font-size: 60px;
+color: green;
+}
 
 
 
 </style>
 <body>
+<div class="header">
+<h1>CYBER SPRAY</h1>
+</div>
+<iframe width="1240" height="600"
+    src="https://www.youtube.com/embed/oMCijY1XGlQ?autoplay=1&mute=1&loop=1&playlist=oMCijY1XGlQ"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
+
+
+
   <aside class="sidebar">
-  
+  <div class="home">
   <button onclick="scrollToY(0)"> <p>🏠</p><i class="fas fa-home"></i></button>
-  <button onclick="scrollToY(1000)"><p>🖌<p><i class="fas fa-user"></i></button>
+  </div>
+  <button onclick="scrollToY(1000)"><p>🎨<p><i class="fas fa-user"></i></button>
   <button onclick="scrollToY(2000)"><p>📃</p><i class="fas fa-bolt"></i></button>
   <button onclick="scrollToY(3000)"><p>📞</p><i class="fas fa-skull"></i></button>
 </aside>
@@ -88,5 +126,12 @@ body {
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   </script>
+  
+  
+
+  
+  
 </body>
+
 </html>
+
