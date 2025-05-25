@@ -6,6 +6,12 @@
   <title>Ugga Scroll</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-XxU3j2Q+afFvHjcPCE6QGp6TX6UoR7T+9Ez9ESVzrZBGzIYcocA2Qx2Z1l+1yZ+c7NmWWoZP9ukS6z0wSX1Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+  
+  
+  
+  
+  
+
     * {
       margin: 0;
       padding: 0;
@@ -13,9 +19,12 @@
       scroll-behavior: smooth;
     }
     body {
-      background: #111;
+      background: #00001a;
       color: white;
       font-family: sans-serif;
+	  background-image: url("https://t3.ftcdn.net/jpg/03/20/75/32/360_F_320753272_TvaIZ9oXLOLIwloBaJRlwOHnaIxCdG6w.jpg")
+	  background: cover;
+	
     }
     .header {
       text-align: center;
@@ -114,7 +123,7 @@
         background: #000;
         padding: 10px;
         border-radius: 30px;
-        gap: 60px;
+        gap: 20px;
       }
       .sidebar button {
         width: 40px;
@@ -129,13 +138,15 @@
       bottom: 10px;
       top: auto;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-10%);
     }
   </style>
 </head>
 <body>
+  <canvas id="bg"></canvas>
+
   <div class="header">
-    <h1>CYBER SPRAY</h1>
+    <img src="https://github.com/CCCCRAZZZY/logo-cs/blob/main/LOGO%20SYYBER.png?raw=true" width="1200" height="500"/>
   </div>
 
   <div class="video-container">
@@ -148,11 +159,11 @@
   </div>
 
   <aside class="sidebar">
-  <button onclick="scrollToY(0)">🏠<span class="stars"></span></button>
-  <button onclick="scrollToY(1000)">🎨<span class="stars"></span></button>
-  <button onclick="scrollToY(2000)">📃<span class="stars"></span></button>
-  <button onclick="scrollToY(3000)">📞<span class="stars"></span></button>
-</aside>
+    <button onclick="scrollToY(0)">🏠<span class="stars"></span></button>
+    <button onclick="scrollToY(1000)">🎨<span class="stars"></span></button>
+    <button onclick="scrollToY(2000)">📃<span class="stars"></span></button>
+    <button onclick="scrollToY(3000)">📞<span class="stars"></span></button>
+  </aside>
 
 
   <main>
@@ -169,6 +180,5 @@
   </script>
 </body>
 </html>
-
 
 
