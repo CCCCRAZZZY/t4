@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyber Spray</title>
-	<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKDTz8zEoBu1yJkYw0t_0IH4sHMgx-VI1TA&s" />
+  <title>CYBER SPRAY</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKDTz8zEoBu1yJkYw0t_0IH4sHMgx-VI1TA&s" />
   <style>
   
   
@@ -140,15 +140,246 @@
       left: 50%;
       transform: translateX(-10%);
     }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 #canvas-container {
+      background-color: #eee;
+      width: 310px;
+      height: 300px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      margin-bottom: 10px;
+	  float: right;
+    }
+    #myCanvas {
+      background-color: #eee;
+      cursor: crosshair;
+    }
+    #controls {
+      margin-top: 10px;
+    }
+
+	#update{
+	color: blue;
+	}
+    .container img {
+      max-width: 50%; /* Makes the image half its original size */
+      height: auto;
+    }
+    #wall {
+      width: calc(98% + 50px); /* 100% plus extra */
+      margin-left: -28px;      /* Offset for body padding */
+      height: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #eee;
+      background-image: url(''); /* Insert your image URL here */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .wall-piece {
+      width: 100px;
+      height: 100px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    /* Style for the drawing counter text */
+    #drawingCounter {
+      color: white;
+      -webkit-text-stroke: 1px blue;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .container {
+	background-image:url('data:image/png;base64,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');
+      width: 600px; /* Adjust as needed */
+      padding: 10px;
+      border: 1px solid black;
+    }
+    .container img {
+      width: 300px; /* Smaller image size */
+      height: auto;
+      display: block;
+      margin: 5px auto;
+    }
+	.containerh {
+            position: absolute;
+        }
+
+        .invisible {
+            opacity: 0;
+            position: center;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            visibility: hidden;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+        .containerh:hover .tooltip {
+            visibility: visible;
+        }
+
+        /* Position each button and tooltip separately */
+        #onion { left: 980px; top: 600px; }
+        #tooltip1 { left: 100px; top: 100px; }
+		
+        #c { left: 480px; top: 600px; }
+        #tooltip2 { left: 100px; top: 100px; }
+         
+    #addButton {
+      background-color: #16E9AA;
+	  color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    }
+	#clearButton {
+      background-color: #FFFFFF;
+	  color: red;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    }
+	#clearButton:hover {
+    box-shadow: 0 0 15px rgba(140, 24, 24, 0.8), 0 0 30px rgba(140, 24, 24, 50);
+	}
+	#clearButton:active {
+     background-color: black;
+	}
+	#downloadButton:active {
+     background-color: #00d5ff;
+	}
+	#addButton:active {
+     background-color: #fff700;
+	}
+	.h2{
+	color: blue;
+	}
+	#addButton:hover {
+    box-shadow: 0 0 15px rgba(131, 243, 109, 0.8), 0 0 30px rgba(131, 243, 109, 50);
+}
+
+    #downloadButton {
+    background-color: #519BE1;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+#downloadButton:hover {
+    box-shadow: 0 0 15px rgba(0, 84, 163, 0.8), 0 0 30px rgba(0, 83, 163, 50);
+}
+    /* New CSS for the horizontal swipe gallery */
+    #wallGallery {
+      width: calc(100% + 29px);
+      margin-left: -30px;
+      height: 120px;
+      overflow-x: auto;
+      background-color: #222;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+    #wallGallery div {
+      position: relative;
+      margin-right: 10px;
+    }
+    #wallGallery div {
+   position: relative;
+   margin-right: 10px;
+}
+	
+	#music-btn {
+    position: absolute;
+    top: 500px; /* Change this to move vertically */
+    left: 1170px; /* Change this to move horizontally */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#music-btn:hover {
+    background-color: #ffaa00;
+}
+
+#h4 {
+  color: white;
+}
+
+
+img.responsive {
+    width: 100%;
+    max-width: 1200px; /* Or whatever the original size is */
+    height: auto;
+  }
+
+  @media (max-width: 600px) {
+    img.responsive {
+      max-width: 90%; /* Shrinks on smaller screens */
+    }
+  }
   </style>
 </head>
 <body>
-  <canvas id="bg"></canvas>
+  
 
   <div class="header">
-    <img src="https://github.com/CCCCRAZZZY/logo-cs/blob/main/LOGO%20SYYBER.png?raw=true" width="1200" height="500"/>
+    <img src="https://github.com/CCCCRAZZZY/logo-cs/blob/main/LOGO%20SYYBER.png?raw=true" width="1200" height="500" alt="Description" class="responsive"/>
+	<h1> SPRAY AWAY!</h1>
+	<p> Beta 1.1</p>
   </div>
-
+<canvas id="bg"></canvas>
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/oMCijY1XGlQ?autoplay=1&mute=1&loop=1&playlist=oMCijY1XGlQ"
       title="YouTube video player"
@@ -157,9 +388,30 @@
       allowfullscreen>
     </iframe>
   </div>
+  <h2>Editable Backdrop Canvas</h2>
+
+  <div id="canvas-container">
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+  </div>
+  
+  <input type="color" id="colorPicker">
+  <div id="controls">
+  
+    <button id="addButton">ADD!</button>
+    <button id="downloadButton">Download</button>
+    
+    <button id="clearButton">Clear Canvas</button>
+	
+  </div>
+  <h3>Online Wall</h3>
+  <p id="dynamicText" style="position: absolute; left: 800px; top: 20px;"></p>
+  <div id="wall"></div>
+  <!-- Horizontal swipe gallery for archived walls -->
+  <h3>Wall Gallery (coming soon)</h3>
+  <div id="wallGallery"></div>
 
   <aside class="sidebar">
-    <button onclick="scrollToY(0)">🏠<span class="stars"></span></button>
+    <button onclick="scrollToY(100)">🏠<span class="stars"></span></button>
     <button onclick="scrollToY(1000)">🎨<span class="stars"></span></button>
     <button onclick="scrollToY(2000)">📃<span class="stars"></span></button>
     <button onclick="scrollToY(3000)">📞<span class="stars"></span></button>
@@ -177,8 +429,169 @@
     function toggleLayout() {
       document.body.classList.toggle('mobile');
     }
+	
+	
+	document.addEventListener('DOMContentLoaded', function() {
+    // Check first visit
+    function checkFirstVisit() {
+        const visitedFlag = localStorage.getItem('visited');
+        if (visitedFlag === null || visitedFlag === undefined) {
+            alert("Welcome to a(hopefully😳) beatiful webpage. No log-ins, nothing like that! Just draw WHATEVER WITH NO PUNISHMENT😁😅");
+            localStorage.setItem('visited', true);
+        } else {
+            alert("We meet again...");
+        }
+    }
+    checkFirstVisit();
+
+    // Get DOM elements
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    const colorPicker = document.getElementById('colorPicker');
+    const addButton = document.getElementById('addButton');
+    const clearButton = document.getElementById('clearButton');
+    const wall = document.getElementById('wall');
+    const drawingCounter = document.getElementById('drawingCounter');
+    const downloadButton = document.getElementById('downloadButton');
+    let currentColor = '#000000';
+    let drawing = false;
+    let processingReset = false; // Avoid duplicate additions
+
+    // Dynamic text function
+    function updateDynamicText() {
+        const dynamicTextElement = document.getElementById('dynamicText');
+        const dynamicTextLines = [
+            "HAVE FUN🤩",
+            "Today's challenge: Draw a brick",
+            "Full screen=best screen😁🤗🧐",
+            "Today's challenge: Draw an upside down T😳",
+            " NO PAY TO WIN!",
+            "Today's challenge: Draw CIA documents ",
+            "Today's challenge: Draw a hyper realistic toe🦶",
+            "Full screen=best screen😁🤗🧐",
+            "jī nav, jī ir vuoji, tīsa nūtiks ᓭ𝙹𝙹リ",
+            "No annoying ads!😍",
+            "No censorship( unless it's real bad💀)",
+            "jī nav, jī ir vuoji, tīsa nūtiks ᓭ𝙹𝙹リ",
+            "Today's challenge: Draw cool S",
+            "Full screen=best screen😁🤗🧐",
+            "Today's challenge: Draw your inner demons😡",
+            " No cookies, you are sweet enough!🍪",
+        ];
+        const randomIndex = Math.floor(Math.random() * dynamicTextLines.length);
+        dynamicTextElement.textContent = dynamicTextLines[randomIndex];
+        dynamicTextElement.style.color = "white";
+        dynamicTextElement.style.textShadow = "-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black";
+    }
+
+    // Drawing functions
+    function startDrawing(e) {
+        console.log("mousedown event fired", e);
+        drawing = true;
+        draw(e);
+    }
+    function draw(e) {
+        if (!drawing) return;
+        ctx.fillStyle = currentColor;
+        for (let i = 0; i < 10; i++) {
+            let offsetX = e.offsetX + (Math.random() * 10 - 5);
+            let offsetY = e.offsetY + (Math.random() * 10 - 5);
+            ctx.beginPath();
+            ctx.arc(offsetX, offsetY, 1, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+    function stopDrawing() {
+        drawing = false;
+        ctx.beginPath();
+    }
+
+    // Attach canvas drawing events
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+
+    // Color picker change event
+    colorPicker.addEventListener('input', function() {
+        currentColor = colorPicker.value;
+    });
+
+    // Update counter based on localStorage
+    function updateCounter() {
+    let savedWall = JSON.parse(localStorage.getItem('savedWall')) || [];
+    let remaining = 59 - savedWall.length;
+    
+    // When remaining drawings reach 0, reset the wall
+    if (remaining <= 0) {
+        localStorage.setItem('savedWall', JSON.stringify([])); // clear saved drawings
+        wall.innerHTML = ''; // remove all wall pieces
+        remaining = 59; // reset the counter
+    }
+    
+    drawingCounter.textContent = `${remaining} drawing(s) until reset`;
+}
+
+
+    // Load saved drawings and dynamic text on window load
+    window.addEventListener('load', function() {
+        let savedWall = JSON.parse(localStorage.getItem('savedWall')) || [];
+        savedWall.forEach(imgData => {
+            const piece = document.createElement('div');
+            piece.classList.add('wall-piece');
+            piece.style.backgroundImage = `url(${imgData})`;
+            wall.appendChild(piece);
+        });
+        updateCounter();
+        updateDynamicText();
+        setInterval(updateDynamicText, 5000);
+    });
+
+    // Save the current canvas drawing to the wall
+    addButton.addEventListener('click', function() {
+        if (processingReset) return; // Avoid duplicate additions
+        const imageData = canvas.toDataURL('image/png');
+        let savedWall = JSON.parse(localStorage.getItem('savedWall')) || [];
+        savedWall.push(imageData);
+        localStorage.setItem('savedWall', JSON.stringify(savedWall));
+        const piece = document.createElement('div');
+        piece.classList.add('wall-piece');
+        piece.style.backgroundImage = `url(${imageData})`;
+        wall.appendChild(piece);
+        updateCounter();
+    });
+
+    // Clear button: erase all drawings without affecting the ability to draw afterward
+    clearButton.addEventListener("click", function() {
+        console.log("Clear button clicked!");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath(); // Reset any current path
+        drawing = false; // Ensure drawing state is reset
+    });
+
+    // Download canvas image
+    function downloadCanvas() {
+        const canvasImage = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.href = canvasImage;
+        link.download = 'Bestdrawing😍';
+        link.click();
+    }
+    downloadButton.addEventListener('click', downloadCanvas);
+});
+
+
+const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        const button = document.getElementById("onion");
+        
+        const onionImage = new Image();
+        onionImage.src = "data:image/jpeg;base64,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";
+        button.addEventListener("click", () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous drawings
+            ctx.drawImage(onionImage, 0, 0, 450, 450); // Draw the onion at (100,100) with 200x200 size
+        });
   </script>
 </body>
 </html>
-
 
